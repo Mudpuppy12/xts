@@ -6,7 +6,6 @@ resource "aws_db_subnet_group" "my_db_subnet_group" {
   }
 }
 
-
 resource "aws_security_group" "rds_sg" {
   name_prefix = "rds-"
 
@@ -17,7 +16,7 @@ resource "aws_security_group" "rds_sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["76.183.229.179/32"]
   }
 }
 
